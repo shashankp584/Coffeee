@@ -1,0 +1,112 @@
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .profile-header {
+    width: 200px;
+    height: 200px;
+    gap: 0px;
+    border: 4px 0px 0px 0px;
+    opacity: 0px;
+    
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .profile-info p{
+    text-align: center;
+    gap: 2rem;  
+  }
+  .profile-info h2 {
+    margin: 1px 0;
+  }
+  
+  .profile-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    height: 40px;
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 550;
+  }
+  
+  .approve-btn {
+    background-color: rgba(27, 73, 234, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  
+  .reject-btn {
+    background-color: #F44336;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .resume-btn {
+    border: 1px solid   rgba(27, 73, 234, 1);
+    background-color:rgba(255, 255, 255, 1);
+    color: rgba(27, 73, 234, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  button:hover {
+    opacity: 0.6;
+  }
+  
+  .profile-details {
+    text-align: left;
+  }
+  
+  .profile-details p {
+    margin: 5px 0;
+  }
+  
+  strong {
+    color: #555;
+  }
+  

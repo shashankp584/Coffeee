@@ -1,0 +1,32 @@
+html,body{
+    width: 100%;
+    height: 100%;
+  }
+  .app-container {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    
+    .assessment-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    
+    .assessment-info {
+      flex: 1;
+    }
+    
+    .assessment-video video {
+        width: 600px;
+        height: 338px;
+        top: 832px;
+        left: 549px;
+        gap: 0px;
+        opacity: 0px;
+        border: 1px solid rgba(141, 151, 172, 0.3)
+    }
