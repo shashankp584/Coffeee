@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles/ProjectWork.css';
+import { ProjectCard,ProjectInfo } from './Styled';
 
 const ProjectWork = ( {project} ) => {
   return (
-    <div className="assessment-card">
-      <div className="assessment-info">
+    <ProjectCard>
+      <ProjectInfo>
         <p>{project.title}</p>
         <p>Skill: {project.skill}</p>
         <p>Duration:  {project.duration}</p>
@@ -14,14 +14,14 @@ const ProjectWork = ( {project} ) => {
               <div className="download-description">{project.downloadDescription}</div>
             </>
           )}
-      </div>
+      </ProjectInfo>
       <div className="assessment-video">
         <video style={{ width: "100%", height: "auto", maxWidth: "100%" }} controls>
           <source src={project.videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-    </div>
+    </ProjectCard>
   );
 };
 

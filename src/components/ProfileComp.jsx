@@ -1,30 +1,42 @@
 import React from "react";
-import "./styles/Profile.css"; 
-const Profile = ({ profile }) => {
+import {
+  Profile,
+  ProfileHeader,
+  ProfileImage,
+  ProfileInitials,
+  ProfileInfo,
+  ProfileButtons,
+  ApproveButton,
+  RejectButton,
+  ResumeButton,
+  ProfileDetails,
+} from './Styled.jsx';
+ 
+const ProfileComp = ({ profile }) => {
   const getInitials = (name) => {
     const initials = name.split(" ").map((n) => n[0]).join("");
     return initials.toUpperCase();
   };
 
   return (
-    <div className="profile">
-      <div className="profile-header">
+    <Profile>
+      <ProfileHeader>
         {profile.imageUrl ? (
-          <img src={profile.imageUrl} alt="Profile" className="profile-image" />
+          <ProfileImage src={profile.imageUrl} alt="Profile"/ >
         ) : (
-          <div className="profile-initials">
+          <ProfileInitials>
             {getInitials(profile.name)}
-          </div>
+          </ProfileInitials>
         )}
-      </div>
-      <div className="profile-info">
+      </ProfileHeader>
+      <ProfileInfo>
         <h2>{profile.name}</h2>
-        <div className="profile-buttons">
-          <button className="approve-btn">Approve</button>
-          <button className="reject-btn">Reject</button>
-          <button className="resume-btn">View Resume</button>
-        </div>
-        <div className="profile-details">
+        <ProfileButtons>
+          <ApproveButton>Approve</ApproveButton>
+          <RejectButton>Reject</RejectButton>
+          <ResumeButton>View Resume</ResumeButton>
+        </ProfileButtons>
+        <ProfileDetails>
           <p>
             <strong>Contact No: </strong>
             {profile.contact}
@@ -41,10 +53,10 @@ const Profile = ({ profile }) => {
           <p>
             <strong>Resume Score: </strong> {profile.score}%
           </p>
-        </div>
-      </div>
-    </div>
+        </ProfileDetails>
+      </ProfileInfo>
+    </Profile>
   );
 };
 
-export default Profile;
+export default ProfileComp;

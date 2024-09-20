@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
-import Profile from './Profile';
-import './styles/MyModal.css'
+import ProfileComp from './ProfileComp';
 import Assessment from './Assessment';
 import ProjectWork from './ProjectWork';
 import ScreeningInterview from './ScreeningInterview';
+import { Heading, HeadingDescription } from './Styled';
 
 const MyModal = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -77,20 +77,20 @@ const MyModal = () => {
         onCancel={handleCancel}
         className='modal-container'
       >
-        <Profile profile={profile}/>
-        <h2 className='heading'>Assesment History-Live Recordings </h2>
-        <p className='heading-description'>You will be able to view the complete recording of the candidate’s assessments. This way you can also check his approach to problem solving and not just depend on the final output.</p>
+        <ProfileComp profile={profile}/>
+        <Heading>Assesment History-Live Recordings </Heading>
+        <HeadingDescription>You will be able to view the complete recording of the candidate’s assessments. This way you can also check his approach to problem solving and not just depend on the final output.</HeadingDescription>
         {assessments.map((assessment, index) => (
         <Assessment 
           key={index}
           assessments={assessment}
         />
       ))}
-      <h2 className='heading'>Project Work </h2>
-        <p className='heading-description'>This section has the complete recording of candidate’s approach to the project work.</p>
+      <Heading>Project Work </Heading>
+        <HeadingDescription>This section has the complete recording of candidate’s approach to the project work.</HeadingDescription>
       <ProjectWork project={project}/>
-      <h2 className='heading'>Screening Interview </h2>
-        <p className='heading-description'>Here you can see how the candidate answers some real interview questions. It will give you an insight into his communication skills, his ability to handle pressure and details of his past experiences. Makes the hiring decision real easy. </p>
+      <Heading>Screening Interview </Heading>
+        <HeadingDescription>Here you can see how the candidate answers some real interview questions. It will give you an insight into his communication skills, his ability to handle pressure and details of his past experiences. Makes the hiring decision real easy. </HeadingDescription>
       <ScreeningInterview interview={interview} />
       </Modal>
     </>
