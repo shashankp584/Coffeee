@@ -76,7 +76,7 @@ const MyModal = () => {
         onCancel={handleCancel}
         className='modal-container'
       >
-        <ProfileComp profile={profile}/>
+        <ProfileComp profile={profile} onClose={handleCancel}/>
         <Heading>Assesment History - Live Recordings </Heading>
         <HeadingDescription>You will be able to view the complete recording of the candidate’s assessments. This way you can also check his approach to problem solving and not just depend on the final output.</HeadingDescription>
         {assessments.map((assessment, index) => (

@@ -17,7 +17,7 @@ import {
 } from "./Styled.jsx";
 import { useNavigate } from "react-router-dom";
 
-const ProfileComp = ({ profile }) => {
+const ProfileComp = ({ profile, onClose }) => {
   const navigate = useNavigate();
 
   const getInitials = (name) => {
@@ -29,14 +29,18 @@ const ProfileComp = ({ profile }) => {
   };
 
   const handleApprove = () => {
+    onClose();
     navigate("/approve");
+
   };
 
   const handleReject = () => {
+    onClose();
     navigate("/reject");
   };
 
   const handleResume = () => {
+    onClose();
     navigate("/resume");
   };
 
