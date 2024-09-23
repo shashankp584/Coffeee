@@ -14,12 +14,10 @@ const MyModal = () => {
   };
 
   const handleOk = () => {
-    console.log('Ok button clicked');
     setIsModalVisible(false);
   };
 
   const handleCancel = () => {
-    console.log('Cancel button clicked');
     setIsModalVisible(false);
   };
   const profile = 

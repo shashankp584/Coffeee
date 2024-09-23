@@ -15,14 +15,29 @@ import {
   Label,
   Value
 } from "./Styled.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ProfileComp = ({ profile }) => {
+  const navigate = useNavigate();
+
   const getInitials = (name) => {
     const initials = name
       .split(" ")
       .map((n) => n[0])
       .join("");
     return initials.toUpperCase();
+  };
+
+  const handleApprove = () => {
+    navigate("/approve");
+  };
+
+  const handleReject = () => {
+    navigate("/reject");
+  };
+
+  const handleResume = () => {
+    navigate("/resume");
   };
 
   return (
@@ -38,32 +53,31 @@ const ProfileComp = ({ profile }) => {
         <LastSeen>Previously Seen on {profile.lastSeen}</LastSeen>
         <h2>{profile.name}</h2>
         <ProfileButtons>
-          <ApproveButton>Approve</ApproveButton>
-          <RejectButton>Reject</RejectButton>
-          <ResumeButton>View Resume</ResumeButton>
+          <ApproveButton onClick={handleApprove}>Approve</ApproveButton>
+          <RejectButton onClick={handleReject}>Reject</RejectButton>
+          <ResumeButton onClick={handleResume}>View Resume</ResumeButton>
         </ProfileButtons>
         <ProfileDetails>
           <InfoItem>
             <Label>Contact No:</Label>
             <Value>+91-xxxxxxx</Value>
-            </InfoItem>
+          </InfoItem>
           <InfoItem>
             <Label>Email Address:</Label>
             <Value>xxxxx@xxxxx.com</Value>
-            </InfoItem>
+          </InfoItem>
           <InfoItem>
             <Label>Experience:</Label>
             <Value>3 yrs 5 mos</Value>
-            </InfoItem>
+          </InfoItem>
           <InfoItem>
             <Label>Salary:</Label>
             <Value>$24/hr</Value>
-            </InfoItem>
-          
+          </InfoItem>
           <InfoItem>
             <Label>Resume Score:</Label>
             <Value>92%</Value>
-            </InfoItem>
+          </InfoItem>
         </ProfileDetails>
       </ProfileInfo>
     </Profile>
