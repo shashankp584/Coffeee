@@ -10,11 +10,18 @@ import {
   RejectButton,
   ResumeButton,
   ProfileDetails,
-} from './Styled.jsx';
- 
+  LastSeen,
+  InfoItem,
+  Label,
+  Value
+} from "./Styled.jsx";
+
 const ProfileComp = ({ profile }) => {
   const getInitials = (name) => {
-    const initials = name.split(" ").map((n) => n[0]).join("");
+    const initials = name
+      .split(" ")
+      .map((n) => n[0])
+      .join("");
     return initials.toUpperCase();
   };
 
@@ -22,14 +29,13 @@ const ProfileComp = ({ profile }) => {
     <Profile>
       <ProfileHeader>
         {profile.imageUrl ? (
-          <ProfileImage src={profile.imageUrl} alt="Profile"/ >
+          <ProfileImage src={profile.imageUrl} alt="Profile" />
         ) : (
-          <ProfileInitials>
-            {getInitials(profile.name)}
-          </ProfileInitials>
+          <ProfileInitials>{getInitials(profile.name)}</ProfileInitials>
         )}
       </ProfileHeader>
       <ProfileInfo>
+        <LastSeen>Previously Seen on {profile.lastSeen}</LastSeen>
         <h2>{profile.name}</h2>
         <ProfileButtons>
           <ApproveButton>Approve</ApproveButton>
@@ -37,22 +43,27 @@ const ProfileComp = ({ profile }) => {
           <ResumeButton>View Resume</ResumeButton>
         </ProfileButtons>
         <ProfileDetails>
-          <p>
-            <strong>Contact No: </strong>
-            {profile.contact}
-          </p>
-          <p>
-            <strong>Email Address: </strong> {profile.email}
-          </p>
-          <p>
-            <strong>Experience: </strong> {profile.exp}
-          </p>
-          <p>
-            <strong>Salary: </strong> {profile.salary}
-          </p>
-          <p>
-            <strong>Resume Score: </strong> {profile.score}%
-          </p>
+          <InfoItem>
+            <Label>Contact No:</Label>
+            <Value>+91-xxxxxxx</Value>
+            </InfoItem>
+          <InfoItem>
+            <Label>Email Address:</Label>
+            <Value>xxxxx@xxxxx.com</Value>
+            </InfoItem>
+          <InfoItem>
+            <Label>Experience:</Label>
+            <Value>3 yrs 5 mos</Value>
+            </InfoItem>
+          <InfoItem>
+            <Label>Salary:</Label>
+            <Value>$24/hr</Value>
+            </InfoItem>
+          
+          <InfoItem>
+            <Label>Resume Score:</Label>
+            <Value>92%</Value>
+            </InfoItem>
         </ProfileDetails>
       </ProfileInfo>
     </Profile>

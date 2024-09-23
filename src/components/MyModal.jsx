@@ -25,6 +25,7 @@ const MyModal = () => {
   const profile = 
   {
       name: 'Sxxxxxxxx Gxxxxxxx',
+      lastSeen: '21-Aug-24',
       contact: '+91-xxxxxxx',
       email: 'xxxxx@xxxxx.com',
       exp: '3 yrs 5 mos',
@@ -68,7 +69,7 @@ const MyModal = () => {
   return (
     <>
       <Button type="primary" onClick={showModal}>
-        Open Modal
+        Open Popup
       </Button>
       <Modal 
         title="" 
@@ -78,7 +79,7 @@ const MyModal = () => {
         className='modal-container'
       >
         <ProfileComp profile={profile}/>
-        <Heading>Assesment History-Live Recordings </Heading>
+        <Heading>Assesment History - Live Recordings </Heading>
         <HeadingDescription>You will be able to view the complete recording of the candidate’s assessments. This way you can also check his approach to problem solving and not just depend on the final output.</HeadingDescription>
         {assessments.map((assessment, index) => (
         <Assessment 

@@ -9,6 +9,15 @@ export const AssessmentCard = styled.div`
   border: 1px solid #ccc;
   margin-bottom: 20px;
 
+  p{
+    font-family: Basis Grotesque Pro;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+  }
+
 `;
 
 export const AssessmentInfo = styled.div`
@@ -88,7 +97,7 @@ export const ProfileInitials = styled.div`
 export const ProfileInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   text-align: center;
 
   p {
@@ -99,6 +108,16 @@ export const ProfileInfo = styled.div`
   h2 {
     margin: 1px 0;
   }
+`;
+export const LastSeen = styled.h4`
+text-align: left;
+padding: 7px;
+border-radius: 8px 8px 8px 8px;
+border: 1px;
+background-color : #e4e8ec;
+font-weight: 700;
+margin: 0;
+align-self: center;
 `;
 
 export const ProfileButtons = styled.div`
@@ -116,7 +135,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 550;
+  font-weight: 500;
   transition: opacity 0.3s ease;
 
   &:hover {
@@ -147,15 +166,29 @@ export const ResumeButton = styled(Button)`
 `;
 
 export const ProfileDetails = styled.div`
-  text-align: left;
+display: flex;
+flex-direction: column;
+max-width: 400px;
+margin: 0 auto;
+`;
 
-  p {
-    margin: 5px 0;
-  }
+export const InfoItem = styled.div`
+display: flex;
+justify-content: space-between;
+padding: 8px 0;
+border-top: 1px solid rgba(200, 202, 204, 1)
+`;
 
-  strong {
-    color: #555;
-  }
+export const Label = styled.span`
+font-weight: bold;
+flex-basis: 50%;
+text-align: left;
+padding-right: 20px;
+`;
+
+export const Value = styled.span`
+flex-basis: 50%;
+text-align: right;
 `;
 
 /* ------------------ Project Styles ------------------ */
@@ -166,6 +199,15 @@ export const ProjectCard = styled.div`
   padding: 20px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  
+  p{
+    font-family: Basis Grotesque Pro;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+  }
 `;
 
 export const ProjectInfo = styled.div`
@@ -180,6 +222,15 @@ export const InterviewCard = styled.div`
   padding: 20px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+
+  p{
+    font-family: Basis Grotesque Pro;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+  }
 `;
 
 export const InterviewInfo = styled.div`
