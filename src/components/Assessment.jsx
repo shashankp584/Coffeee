@@ -1,5 +1,5 @@
 import React from "react";
-import { AssessmentCard, AssessmentInfo,  } from "./Styled.jsx";
+import { AssessmentCard, AssessmentInfo,  } from "../Styled.jsx";
 
 const Assessment = ({ assessments }) => {
   return (

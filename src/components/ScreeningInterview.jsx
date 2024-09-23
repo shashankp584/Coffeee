@@ -1,5 +1,5 @@
 import React from 'react';
-import { InterviewCard,InterviewInfo } from './Styled';
+import { InterviewCard,InterviewInfo } from '../Styled';
 
 const ScreeningInterview = ( {interview} ) => {
   return (

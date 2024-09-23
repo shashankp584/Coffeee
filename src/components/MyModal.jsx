@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import ProfileComp from './ProfileComp';
 import Assessment from './Assessment';
 import ProjectWork from './ProjectWork';
 import ScreeningInterview from './ScreeningInterview';
-import { Heading, HeadingDescription } from './Styled';
+import { Heading, HeadingDescription, StyledButton } from '../Styled';
 
 const MyModal = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -66,15 +66,17 @@ const MyModal = () => {
   
   return (
     <>
-      <Button type="primary" onClick={showModal}>
-        Open Popup
-      </Button>
+      <h1>Click below to open candidate’s profile </h1>
+      <StyledButton type="primary" onClick={showModal}>
+        <i className="ri-eye-fill"> Display Candidate </i>
+      </StyledButton>
       <Modal 
         title="" 
         visible={isModalVisible} 
         onOk={handleOk} 
         onCancel={handleCancel}
-        className='modal-container'
+        className='ModalContainer'
+        style={{ width: '800px' }}
       >
         <ProfileComp profile={profile} onClose={handleCancel}/>
         <Heading>Assesment History - Live Recordings </Heading>

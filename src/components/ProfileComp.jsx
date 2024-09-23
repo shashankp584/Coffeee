@@ -14,7 +14,7 @@ import {
   InfoItem,
   Label,
   Value
-} from "./Styled.jsx";
+} from "../Styled.jsx";
 import { useNavigate } from "react-router-dom";
 
 const ProfileComp = ({ profile, onClose }) => {

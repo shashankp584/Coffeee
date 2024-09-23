@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectCard,ProjectInfo } from './Styled';
+import { ProjectCard,ProjectInfo } from '../Styled';
 
 const ProjectWork = ( {project} ) => {
   return (

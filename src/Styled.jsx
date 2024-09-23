@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { Modal,Button as AntdButton } from 'antd';
 /* ------------------ Assessment Styles ------------------ */
 export const AssessmentCard = styled.div`
   display: flex;
@@ -25,11 +25,26 @@ export const AssessmentInfo = styled.div`
 `;
 
 /* ------------------ Modal Styles ------------------ */
-export const ModalContainer = styled.div`
+
+export const StyledButton = styled(AntdButton)`
+  background-color: rgb(20,125,100,.75); 
+  color: black; 
+  border: none; 
+  margin-top:10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px; 
+  transition: background-color 0.3s; 
+  &:hover {
+    background-color: #40a9ff; 
+    color: rgba(100,100,100,1);
+  }
+  `;
+export const ModalContainer = styled(Modal)`
   width: 100%;
   height: 100%;
   gap: 0px;
-  border: 1px 0px 0px 0px;
+  border: 1px 1px 1px 1px;
   opacity: 0px;
   border: 1px solid rgba(239, 239, 240, 1);
 `;
